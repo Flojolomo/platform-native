@@ -30,8 +30,9 @@ backup_cflags = env.get("CFLAGS", [])
 backup_cxxflags = env.get("CXXFLAGS", [])
 
 # Scan for GCC compiler
-env.Tool("gcc")
-env.Tool("g++")
+# env.Tool("gcc")
+# env.Tool("g++")
+env.Tool("clang++")
 
 # Restore C/C++ build flags as they were overridden by env.Tool
 env.Append(CFLAGS=backup_cflags, CXXFLAGS=backup_cxxflags)
